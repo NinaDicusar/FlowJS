@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JS exemple for adaptive page</title>
+      <style>
+.title-large{
+    padding: 2em;
+
+}
+.title-medium{
+    padding: 0.5em;
+    text-align: center;
+}
+.title-small{
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+      </style>
+</head>
+<body onresize="adapt()">
+
+<h1 id="heading">JS exemple for adaptive page</h1>
+
+
+    <script>
+function adapt(){
+const BREAKPOINTONE = 800
+const BREAKPOINTTWO = 1200
+let viewportWidth = innerWidth
+if (viewportWidth <= BREAKPOINTONE ){
+   heading.className = "title-small"
+   // alert("Smatrphone")//
+
+}else{
+    heading.className = "title-medium"
+
+  //alert ("Tablet")//
+}
+if (viewportWidth >= BREAKPOINTTWO)
+  heading. className = "title-large"
+
+}
+    </script>
+    
+</body>
+</html>
